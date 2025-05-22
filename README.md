@@ -39,9 +39,12 @@
 ## 🛠 사용한 기술 스택
 
 - **Frontend**  
-  - HTML / CSS / JavaScript  
+  - CSS / JavaScript  
   - React  
   - TailwindCSS
+ 
+- **Backend**  
+  - Java
 
 - **버전 관리 & 협업**  
   - Git & GitHub  
@@ -54,15 +57,17 @@
 
 ## 📁 폴더 구조 (예상)
 ```plaintext
-myportfolio/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/         # 공통 UI 컴포넌트
-│   ├── pages/              # 각 화면 구성 (Home, About, Skills, etc.)
-│   ├── assets/             # 이미지, 아이콘 등 정적 리소스
-│   ├── styles/             # 전역 스타일 파일
-│   └── App.jsx
-├── README.md
-└── package.json
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── Navbar.jsx
+│   ├── TypewriterText.jsx
+│   ├── ContactModal.jsx
+│   └── PageButtons.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   └── Resume.jsx
+├── App.jsx
+└── index.js
