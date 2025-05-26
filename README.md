@@ -36,7 +36,7 @@
   - “24시간 내 답변드립니다” 문구  
   - 연락처 항목 편집 기능
 
-## 🛠 사용한 기술 스택
+## 🛠 사용할 기술 스택
 
 - **Frontend**  
   - CSS / JavaScript  
@@ -48,10 +48,6 @@
 
 - **버전 관리 & 협업**  
   - Git & GitHub  
-
-- **기타 예정 기술**  
-  - 이메일 처리용 Backend (예: Firebase, EmailJS 등)  
-  - 배포 플랫폼: GitHub Pages 또는 Vercel
 
 ---
 
