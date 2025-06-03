@@ -2,31 +2,54 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>Portfoilo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>데이터, 코드, 그리고 김은민</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <h1>K's Portfoilo</h1>
-      <nav>
+      <button id="themeToggle" aria-label="테마 전환">🌓</button>
+      <nav class="navbar">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contacts.html">Contact</a></li>
         </ul>
       </nav>
+      <h1>안녕하세요 김은민입니다! 👋</h1>
     </header>
 
     <main>
-      <section id="home">
-        <p>안녕하세요!</p>
-        <p>저는 김은민입니다!</p>
-        <p>저의 포트폴리오를 구경해보세요!</p>
+      <section class="intro-message">
+        <!-- 카톡 스타일 문장 나오는 곳 -->
       </section>
 
-      <!-- 앞으로 About, Skills, Projects, Contact 추가될 부분 -->
+      <section class="buttons">
+        <button id="btnAbout">김은민 알아보기</button>
+        <button id="btnProjects">프로젝트</button>
+        <button id="btnResume">이력서</button>
+      </section>
     </main>
+
+    <!-- 우측 하단 연락처 버튼 -->
+    <button id="contactBtn" class="contact-btn">📞 연락하기</button>
+
+    <!-- 연락처 입력 폼 (초기엔 숨김) -->
+    <div id="contactForm" class="contact-form hidden">
+      <form>
+        <label>제목: <input type="text" name="title" required /></label><br />
+        <label
+          >보내는 사람(이메일):
+          <input type="email" name="email" required /></label
+        ><br />
+        <label>내용: <textarea name="message" required></textarea></label><br />
+        <label>파일 첨부: <input type="file" name="file" /></label><br />
+        <button type="submit">보내기</button>
+        <button type="button" id="cancelContact">취소</button>
+      </form>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
