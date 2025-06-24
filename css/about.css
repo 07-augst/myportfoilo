@@ -1,0 +1,250 @@
+:root {
+  --bg-color: #f0f4f8;
+  --text-color: #222222;
+  --primary-color: #0066ff;
+  --primary-hover: #004ecc;
+  --accent-color: #28a745;
+  --danger-color: #dc3545;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #3399ff;
+  --primary-hover: #1a73e8;
+  --accent-color: #34d399;
+  --danger-color: #ef4444;
+}
+
+/* 박스 사이징 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 기본 스타일 */
+body {
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 */
+header {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--primary-hover)
+  );
+  color: white;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px var(--shadow-strong);
+}
+
+/* 다크모드 시 header 배경과 텍스트 색상 변경 */
+[data-theme='dark'] header {
+  background: linear-gradient(90deg, #1769aa, #2196f3);
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* 로고 텍스트 */
+header .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  user-select: none;
+}
+
+/* 내비게이션 */
+.navbar nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 6px 8px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+  width: 100%;
+}
+
+.navbar nav a:hover {
+  color: #cce4ff;
+}
+
+/* 테마 토글 버튼 */
+#themeToggle {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px var(--shadow-light);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  user-select: none;
+}
+
+#themeToggle:hover,
+#themeToggle:focus {
+  outline: none;
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px var(--shadow-strong);
+}
+
+/* 다크모드에서 테마 토글 버튼 색상 조정 */
+[data-theme='dark'] #themeToggle {
+  background: rgba(224, 224, 224, 0.15);
+  color: var(--primary-color);
+}
+
+[data-theme='dark'] #themeToggle:hover,
+[data-theme='dark'] #themeToggle:focus {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.8);
+}
+
+/* 메인 콘텐츠 */
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* 인트로 메시지 */
+.intro-message p {
+  font-size: 1.4rem;
+  margin: 1rem 0 2rem 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* 버튼 그룹 */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--primary-hover)
+  );
+  border: none;
+  border-radius: 8px;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons button:hover {
+  background: linear-gradient(
+    45deg,
+    var(--primary-hover),
+    var(--primary-color)
+  );
+  box-shadow: 0 6px 20px var(--shadow-strong);
+}
+
+/* 연락처 버튼 */
+.contact-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 16px 20px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(40, 167, 69, 0.4);
+  transition: background-color 0.3s ease;
+  z-index: 200;
+}
+
+.contact-btn:hover {
+  background-color: #218838;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .navbar nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* fadeIn 애니메이션 */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
