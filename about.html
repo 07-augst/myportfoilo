@@ -53,14 +53,14 @@
             </div>
             <div>
               <dt>이메일</dt>
-              <dd>example@email.com</dd>
+              <dd>dotaeil@naver.com</dd>
             </div>
           </dl>
           <p class="profile-intro">
             🚀 데이터를 통한 문제 해결<br />
             📊 다양한 프로젝트 & 경진대회 경험<br />
             💡 새로운 기술과 도전에 열려 있음<br />
-            #데이터분석 #디지털경영 #협업 #성장중
+            <span class="tags">#데이터분석 #디지털경영 #협업 #성장중</span>
           </p>
         </div>
       </section>
@@ -70,65 +70,109 @@
         <article class="card" aria-labelledby="edu-heading">
           <h2 id="edu-heading">
             🎓 학력
-            <button class="add-btn" aria-label="학력 추가">➕</button>
+            <button class="add-btn" aria-label="학력 추가" data-type="edu">
+              ➕
+            </button>
           </h2>
-          <ul>
+          <ul data-type="edu">
             <li>덕원고등학교 졸업 (2018.03–2021.02)</li>
-            <li>고려대학교(세종) 디지털경영전공 졸업 예정 (2021.03–2025.02)</li>
+            <li>고려대학교(세종) 디지털경영전공 졸업 (2021.03–2025.02)</li>
           </ul>
+          <div class="add-form hidden" data-type="edu">
+            <input type="text" placeholder="내용을 입력하세요" />
+            <button class="confirm-btn">확인</button>
+          </div>
         </article>
 
         <article class="card" aria-labelledby="lang-heading">
           <h2 id="lang-heading">
             🗣️ 어학
-            <button class="add-btn" aria-label="어학 추가">➕</button>
+            <button class="add-btn" aria-label="어학 추가" data-type="lan">
+              ➕
+            </button>
           </h2>
-          <ul>
+          <ul data-type="lan">
             <li>TOEIC 850점 (2024.11)</li>
           </ul>
+          <div class="add-form hidden" data-type="lan">
+            <input type="text" placeholder="내용을 입력하세요" />
+            <button class="confirm-btn">확인</button>
+          </div>
         </article>
 
         <article class="card" aria-labelledby="cert-heading">
           <h2 id="cert-heading">
             🪪 자격증
-            <button class="add-btn" aria-label="자격증 추가">➕</button>
+            <button class="add-btn" aria-label="자격증 추가" data-type="cert">
+              ➕
+            </button>
           </h2>
-          <ul>
+          <ul data-type="cert">
             <li>데이터분석 준전문가(ADsP) - 한국데이터산업진흥원 (2024.03)</li>
           </ul>
+          <div class="add-form hidden" data-type="cert">
+            <input type="text" placeholder="내용을 입력하세요" />
+            <button class="confirm-btn">확인</button>
+          </div>
         </article>
 
         <article class="card" aria-labelledby="awards-heading">
           <h2 id="awards-heading">
             🏆 수상 내역
-            <button class="add-btn" aria-label="수상 내역 추가">➕</button>
+            <button
+              class="add-btn"
+              aria-label="수상 내역 추가"
+              data-type="award"
+            >
+              ➕
+            </button>
           </h2>
-          <ul>
+          <ul data-type="award">
             <li>데이터 분석 경진대회 대상 (Python · 팀 프로젝트)</li>
           </ul>
+          <div class="add-form hidden" data-type="award">
+            <input type="text" placeholder="내용을 입력하세요" />
+            <button class="confirm-btn">확인</button>
+          </div>
         </article>
 
         <article class="card" aria-labelledby="strengths-heading">
           <h2 id="strengths-heading">
             💪 강점
-            <button class="add-btn" aria-label="강점 추가">➕</button>
+            <button class="add-btn" aria-label="강점 추가" data-type="strength">
+              ➕
+            </button>
           </h2>
-          <ul>
+          <ul data-type="strength">
             <li>빠르게 변화에 적응하는 학습력</li>
             <li>팀원과의 원활한 협업과 소통</li>
             <li>데이터 기반 문제 해결과 의사결정</li>
           </ul>
+          <div class="add-form hidden" data-type="strength">
+            <input type="text" placeholder="내용을 입력하세요" />
+            <button class="confirm-btn">확인</button>
+          </div>
         </article>
 
         <article class="card" aria-labelledby="edu-job-heading">
           <h2 id="edu-job-heading">
             🧑‍💼 직업교육
-            <button class="add-btn" aria-label="직업교육 추가">➕</button>
+            <button
+              class="add-btn"
+              aria-label="직업교육 추가"
+              data-type="edu-job"
+            >
+              ➕
+            </button>
           </h2>
-          <ul>
+          <ul data-type="edu-job">
             <li>KB IT's Your Life 6기 (2025.03 - )</li>
             <li>예시 2</li>
           </ul>
+          <div class="add-form hidden" data-type="edu-job">
+            <input type="text" placeholder="내용을 입력하세요" />
+            <button class="confirm-btn">확인</button>
+          </div>
         </article>
       </section>
     </main>
@@ -159,5 +203,6 @@
       </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
   </body>
 </html>
