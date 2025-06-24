@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
+    <!-- 다크모드 토글 버튼 -->
+    <button
+      id="themeToggle"
+      aria-label="테마 전환"
+      style="position: fixed; top: 1rem; right: 1rem"
+    >
+      🌙
+    </button>
+
+    <header class="navbar">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Project</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <!-- 프로필 카드 -->
+      <section class="profile-card">
+        <img
+          src="assets/images/profile.jpg"
+          alt="김은민 프로필"
+          class="profile-avatar"
+        />
+        <div class="profile-info-right">
+          <h1 class="profile-name">김은민</h1>
+          <dl class="profile-info">
+            <div>
+              <dt>성별</dt>
+              <dd>여성</dd>
+            </div>
+            <div>
+              <dt>생년월일</dt>
+              <dd>2002-08-07</dd>
+            </div>
+            <div>
+              <dt>거주지</dt>
+              <dd>대구</dd>
+            </div>
+            <div>
+              <dt>이메일</dt>
+              <dd>example@email.com</dd>
+            </div>
+          </dl>
+          <p class="profile-intro">
+            🚀 데이터를 통한 문제 해결<br />
+            📊 다양한 프로젝트 & 경진대회 경험<br />
+            💡 새로운 기술과 도전에 열려 있음<br />
+            #데이터분석 #디지털경영 #협업 #성장중
+          </p>
+        </div>
+      </section>
+
+      <!-- 정보 카드 그리드 -->
+      <section class="section-cards">
+        <article class="card" aria-labelledby="edu-heading">
+          <h2 id="edu-heading">
+            🎓 학력
+            <button class="add-btn" aria-label="학력 추가">➕</button>
+          </h2>
+          <ul>
+            <li>덕원고등학교 졸업 (2018.03–2021.02)</li>
+            <li>고려대학교(세종) 디지털경영전공 졸업 예정 (2021.03–2025.02)</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-labelledby="lang-heading">
+          <h2 id="lang-heading">
+            🗣️ 어학
+            <button class="add-btn" aria-label="어학 추가">➕</button>
+          </h2>
+          <ul>
+            <li>TOEIC 850점 (2024.11)</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-labelledby="cert-heading">
+          <h2 id="cert-heading">
+            🪪 자격증
+            <button class="add-btn" aria-label="자격증 추가">➕</button>
+          </h2>
+          <ul>
+            <li>데이터분석 준전문가(ADsP) - 한국데이터산업진흥원 (2024.03)</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-labelledby="awards-heading">
+          <h2 id="awards-heading">
+            🏆 수상 내역
+            <button class="add-btn" aria-label="수상 내역 추가">➕</button>
+          </h2>
+          <ul>
+            <li>데이터 분석 경진대회 대상 (Python · 팀 프로젝트)</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-labelledby="strengths-heading">
+          <h2 id="strengths-heading">
+            💪 강점
+            <button class="add-btn" aria-label="강점 추가">➕</button>
+          </h2>
+          <ul>
+            <li>빠르게 변화에 적응하는 학습력</li>
+            <li>팀원과의 원활한 협업과 소통</li>
+            <li>데이터 기반 문제 해결과 의사결정</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-labelledby="edu-job-heading">
+          <h2 id="edu-job-heading">
+            🧑‍💼 직업교육
+            <button class="add-btn" aria-label="직업교육 추가">➕</button>
+          </h2>
+          <ul>
+            <li>KB IT's Your Life 6기 (2025.03 - )</li>
+            <li>예시 2</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <!-- 연락하기 모달 -->
+    <button id="contactBtn" class="contact-btn" aria-label="연락하기">
+      📞
+    </button>
+    <div
+      id="contactModal"
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-content">
+        <h3 id="modal-title">연락하기</h3>
+        <form id="contactForm">
+          <label>제목<input type="text" name="title" required /></label>
+          <label>이메일<input type="email" name="email" required /></label>
+          <label>내용<textarea name="message" required></textarea></label>
+          <label>파일 첨부<input type="file" name="file" /></label>
+          <div class="modal-actions">
+            <button type="submit">보내기</button>
+            <button type="button" id="cancelContact">취소</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
